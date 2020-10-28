@@ -49,7 +49,7 @@ export const TextField = ({ label, ...props }) => (
   </View>
 );
 
-export const MultLineTextField = ({ label, error, ...props }) => (
+export const MultLineTextField = ({ label, ...props }) => (
   <View style={styles.row}>
     {label && <Text style={styles.label}>{label}</Text>}
     <TextInput
@@ -63,6 +63,6 @@ export const MultLineTextField = ({ label, error, ...props }) => (
       style={styles.multilineBox}
       autoGrow={true}
     />
-    {error && <Text style={styles.error}>{error}</Text>}
+    {props.error && <Text style={styles.error}>{props.error}</Text>}
   </View>
 );

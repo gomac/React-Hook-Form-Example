@@ -41,20 +41,19 @@ const Requirements = (props) => {
             }
             error={errors.newRequirement && errors.newRequirement.message}
           />
-
-          <Button
-            onPress={handleSubmit(onSubmit)}
-            title={"Sub"}
-            label="Submit"
-          />
-
-          {/*           <MultLineTextField
+          <MultLineTextField
+            {...props}
             value={props.newInstructions}
             onChangeText={(newInstructions) =>
               props.setNewInstructions(newInstructions)
             }
             placeholder="Enter skills and experience of applicant"
-          /> */}
+          />
+          <Button
+            onPress={handleSubmit(onSubmit)}
+            title={"Sub"}
+            label="Submit"
+          />
         </ScrollView>
       </View>
     </KeyboardAwareScrollView>

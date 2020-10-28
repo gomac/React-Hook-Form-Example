@@ -7,12 +7,17 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      newRequirement: ""
+      newRequirement: "",
+      newInstructions: ""
     };
   }
 
   setNewRequirement = (val) => {
     this.setState({ newRequirement: val });
+  };
+
+  setNewInstructions = (val) => {
+    this.setState({ newInstructions: val });
   };
 
   render() {
@@ -21,6 +26,8 @@ export default class App extends Component {
         <Requirements
           newRequirement={this.state.newRequirement}
           setNewRequirement={this.setNewRequirement}
+          newInstructions={this.state.newInstructions}
+          setNewInstructions={this.setNewInstructions}
         />
       </View>
     );
